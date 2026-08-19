@@ -6,14 +6,13 @@ While the drone flies its mission, a forward-facing camera streams live video in
 
 ## Core Pipeline Stages
 
-| Stage | Description | Details |
-|-------|-------------|---------|
+| Stage                                    | Description | Details |
+|------------------------------------------|-------------|---------|
 | 1. **Frame Acquisition & Preprocessing** | OpenCV resize → color convert → normalize | [Details](object-detection/frame-acquisition-and-preprocessing.md) |
-| 2. **Inference (YOLO)** | Single-pass multi-scale detection | [Details](object-detection/frame-acquisition-and-preprocessing.md#inference-yolo---you-only-look-once) |
-| 3. **Confidence Thresholding** | Filter low-certainty detections | [Details](object-detection/confidence_thresholding.md) |
-| 4. **Non-Maximum Suppression (NMS)** | Remove duplicate overlapping boxes | [Details](object-detection/nms.md) |
-| 5. **Publishing to the System** | ROS 2 `Detection2DArray` output | [Details](object-detection/publishing.md) |
-| 6. **Timing & Rate Considerations** | Latency budgets, hardware constraints | [Details](object-detection/timing.md) |
+| 2. **Confidence Thresholding**           | Filter low-certainty detections | [Details](object-detection/confidence_thresholding.md) |
+| 3. **Non-Maximum Suppression (NMS)**     | Remove duplicate overlapping boxes | [Details](object-detection/nms.md) |
+| 4. **Publishing to the System**          | ROS 2 `Detection2DArray` output | [Details](object-detection/publishing.md) |
+| 5. **Timing & Rate Considerations**      | Latency budgets, hardware constraints | [Details](object-detection/timing.md) |
 
 ## Model Deployment
 
