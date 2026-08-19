@@ -1,1 +1,27 @@
+# Build artifacts
 /target
+build/
+install/
+log/
+
+# ROS 2 / Python
+*.pyc
+__pycache__/
+*.so
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model weights (large files - use Git LFS instead)
+*.pt
+*.engine
+*.onnx
+*.bin
+*.weights
