@@ -13,11 +13,3 @@ While the drone flies its mission, a forward-facing camera streams live video in
 | 3. **Non-Maximum Suppression (NMS)**     | Remove duplicate overlapping boxes | [Details](object-detection/nms.md) |
 | 4. **Publishing to the System**          | ROS 2 `Detection2DArray` output | [Details](object-detection/publishing.md) |
 | 5. **Timing & Rate Considerations**      | Latency budgets, hardware constraints | [Details](object-detection/timing.md) |
-
-## Model Deployment
-
-- [Cloud Training → Edge Optimization → Local Deployment](object-detection/frame-acquisition-and-preprocessing.md#model-deployment-cloud-vs-local-drone)
-
-## Neural Network Internals
-
-- [Pattern Recognition, Feature Extraction, Prediction Generation](object-detection/frame-acquisition-and-preprocessing.md#what-the-neural-network-does-here)
