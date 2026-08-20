@@ -10,10 +10,10 @@ At the same time, the camera feeds live video into an object detection pipeline.
 
 ROS2 acts as the nervous system - all components (sensors, detectors, planners) communicate by publishing and subscribing to data topics via DDS (Data Distribution Service), which handles discovery, serialization and message delivery, e.g.:
 
-Kalman Filter node subscribes to /gps/fix, /imu/data, /baro/data and publishes to /state_estimate
-YOLO detector node subscribes to /camera/image_raw and publishes to /object_detections
-Path planner node subscribes to /state_estimate, /object_detections and publishes to /desired_trajectory
-GNC/controller node subscribes to /desired_trajectory, /state_estimate and publishes to /motor_commands
+- Kalman Filter node subscribes to /gps/fix, /imu/data, /baro/data and publishes to /state_estimate
+- YOLO detector node subscribes to /camera/image_raw and publishes to /object_detections
+- Path planner node subscribes to /state_estimate, /object_detections and publishes to /desired_trajectory
+- GNC/controller node subscribes to /desired_trajectory, /state_estimate and publishes to /motor_commands
 Each component is independent and can be swapped or tested in isolation.
 
 At the hardware level, the MCU initializes peripherals at boot (SPI / I2C buses, timers, GPIO), reads sensor data continuously via interrupt-driven or DMA-based acquisition, converts raw ADC values to physical units via calibration coefficients, and shares processed data with other MCUs over CAN bus - all running with deterministic timing and no OS overhead.
